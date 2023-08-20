@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thai Esan Restaurant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <style>
+    [class*="col"] {
+      padding: 1rem;
+      border: 2px solid #fff;
+    }
+    .dark {
+      background-color: #777777;
+      color: #fff;
+    }
+    .light {
+      background-color: #aaaaaa;
+      color: #000;
+    }
+    .double-height {
+      height: 12em;
+    }
+    .outline {
+      border: solid 1px #aaa;
+    }
+  </style>
+
+
+ 
+
+
+</head>
+
+
+<body class="px-5 py-5">
+
+  <div class="container outline mt-5">
+    <div class="row dark">
+      <div class="col">
+        <button id='p-button'>Add a New Row</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container outline mt-5">
+    <div class="row light">
+      <div class="col">
+
+      <table id="myTable">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+        </tr>
+        <tr>
+          <td>Jeremy</td>
+          <td>Smith</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+      </table>
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">  -->
+
+
+  <script>
+
+    // Set up a listener for a click on the button.
+    // If there is a click, call addRowLast function.
+    document.getElementById('p-button').addEventListener('click', addRowLast );
+
+
+   function addRowLast() {
+
+      // Get the parent table object to append a row.
+      let table = document.getElementById("myTable");
+   
+      // Create row element
+      let row = document.createElement("tr")
+      
+      // Create 2 column cells
+      let c1 = document.createElement("td");
+      let c2 = document.createElement("td");
+      
+      // Insert firstname and lastname
+      c1.innerText = "Rory";
+      c2.innerText = "Young";
+
+      
+      // Append column 1 and column 2 to row.
+      row.appendChild(c1);
+      row.appendChild(c2);
+
+      
+      // Append row to table body
+      table.appendChild(row)
+   }
+
+  </script>
+
+
+</body>
+
+</html>
